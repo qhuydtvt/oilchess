@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BoardRoom.h"
 
-@interface GamePlayViewController : UIViewController
+@interface GamePlayViewController : UIViewController <BoardRoomDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *vBoard;
+@property BoardRoom* boardRoom;
 
 @end
 
