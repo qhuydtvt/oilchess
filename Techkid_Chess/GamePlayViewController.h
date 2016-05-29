@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GamePlayViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *vBoard;
 

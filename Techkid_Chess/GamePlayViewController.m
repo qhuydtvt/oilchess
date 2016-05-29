@@ -6,14 +6,14 @@
 //  Copyright © 2016 TechKid. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GamePlayViewController.h"
 #import "ChatRoomViewController.h"
 #import "Board.h"
 #import "Piece.h"
 
 #import "PieceView.h"
 
-@interface ViewController ()
+@interface GamePlayViewController ()
 
 @property ChatRoomViewController *socketRoom;
 @property int messageIdx;
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation ViewController
+@implementation GamePlayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

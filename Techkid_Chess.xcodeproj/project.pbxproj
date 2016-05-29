@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		46E5C00F1CF9A796002A7887 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C00E1CF9A796002A7887 /* main.m */; };
 		46E5C0121CF9A796002A7887 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0111CF9A796002A7887 /* AppDelegate.m */; };
-		46E5C0151CF9A796002A7887 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0141CF9A796002A7887 /* ViewController.m */; };
+		46E5C0151CF9A796002A7887 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0141CF9A796002A7887 /* GamePlayViewController.m */; };
 		46E5C0181CF9A796002A7887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C0161CF9A796002A7887 /* Main.storyboard */; };
 		46E5C01A1CF9A796002A7887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C0191CF9A796002A7887 /* Assets.xcassets */; };
 		46E5C01D1CF9A796002A7887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C01B1CF9A796002A7887 /* LaunchScreen.storyboard */; };
@@ -46,6 +46,8 @@
 		840EBFE71CFAF6A30065DCB5 /* Queen.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFE61CFAF6A30065DCB5 /* Queen.m */; };
 		840EBFEA1CFAFB170065DCB5 /* PieceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFE91CFAFB170065DCB5 /* PieceView.m */; };
 		841448CD1CFB0976005B7F13 /* Bishop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841448CC1CFB0976005B7F13 /* Bishop.m */; };
+		841448D11CFB0F25005B7F13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841448D01CFB0F25005B7F13 /* LoginViewController.m */; };
+		841448D51CFB12D1005B7F13 /* NetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 841448D41CFB12D1005B7F13 /* NetworkConfig.m */; };
 		843FEFE51CFABEFC00255901 /* OilWellcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFE41CFABEFC00255901 /* OilWellcome.jpg */; };
 		843FEFE91CFABF5300255901 /* TechKidsLogo.Png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFE81CFABF5300255901 /* TechKidsLogo.Png */; };
 		843FEFEB1CFAC26900255901 /* Chess_Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFEA1CFAC26900255901 /* Chess_Board.png */; };
@@ -69,8 +71,8 @@
 		46E5C00E1CF9A796002A7887 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46E5C0101CF9A796002A7887 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46E5C0111CF9A796002A7887 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		46E5C0131CF9A796002A7887 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		46E5C0141CF9A796002A7887 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46E5C0131CF9A796002A7887 /* GamePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayViewController.h; sourceTree = "<group>"; };
+		46E5C0141CF9A796002A7887 /* GamePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
 		46E5C0171CF9A796002A7887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E5C0191CF9A796002A7887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E5C01C1CF9A796002A7887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,10 @@
 		840EBFE91CFAFB170065DCB5 /* PieceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieceView.m; sourceTree = "<group>"; };
 		841448CB1CFB0976005B7F13 /* Bishop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
 		841448CC1CFB0976005B7F13 /* Bishop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bishop.m; sourceTree = "<group>"; };
+		841448CF1CFB0F25005B7F13 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		841448D01CFB0F25005B7F13 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		841448D31CFB12D1005B7F13 /* NetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConfig.h; sourceTree = "<group>"; };
+		841448D41CFB12D1005B7F13 /* NetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkConfig.m; sourceTree = "<group>"; };
 		843FEFE41CFABEFC00255901 /* OilWellcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OilWellcome.jpg; sourceTree = "<group>"; };
 		843FEFE81CFABF5300255901 /* TechKidsLogo.Png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TechKidsLogo.Png; sourceTree = "<group>"; };
 		843FEFEA1CFAC26900255901 /* Chess_Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chess_Board.png; sourceTree = "<group>"; };
@@ -167,14 +173,14 @@
 		46E5C00C1CF9A796002A7887 /* Techkid_Chess */ = {
 			isa = PBXGroup;
 			children = (
+				841448D21CFB12B8005B7F13 /* Network */,
+				841448CE1CFB0F05005B7F13 /* ViewControllers */,
 				843FF0091CFAD2AC00255901 /* CustomViews */,
 				843FF0051CFACB9A00255901 /* Board */,
 				843FF0041CFAC9EF00255901 /* BoardView */,
 				46E5C0241CF9A7AD002A7887 /* SocketIO */,
 				46E5C0101CF9A796002A7887 /* AppDelegate.h */,
 				46E5C0111CF9A796002A7887 /* AppDelegate.m */,
-				46E5C0131CF9A796002A7887 /* ViewController.h */,
-				46E5C0141CF9A796002A7887 /* ViewController.m */,
 				46E5C0161CF9A796002A7887 /* Main.storyboard */,
 				46E5C0191CF9A796002A7887 /* Assets.xcassets */,
 				46E5C01B1CF9A796002A7887 /* LaunchScreen.storyboard */,
@@ -269,6 +275,26 @@
 				46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		841448CE1CFB0F05005B7F13 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				841448CF1CFB0F25005B7F13 /* LoginViewController.h */,
+				841448D01CFB0F25005B7F13 /* LoginViewController.m */,
+				46E5C0131CF9A796002A7887 /* GamePlayViewController.h */,
+				46E5C0141CF9A796002A7887 /* GamePlayViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		841448D21CFB12B8005B7F13 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				841448D31CFB12D1005B7F13 /* NetworkConfig.h */,
+				841448D41CFB12D1005B7F13 /* NetworkConfig.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		843FF0041CFAC9EF00255901 /* BoardView */ = {
@@ -390,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841448D11CFB0F25005B7F13 /* LoginViewController.m in Sources */,
 				46E5C09D1CF9A7AD002A7887 /* SocketIOClientStatus.swift in Sources */,
 				46E5C0961CF9A7AD002A7887 /* SocketEnginePacketType.swift in Sources */,
 				46E5C0951CF9A7AD002A7887 /* SocketEngineClient.swift in Sources */,
@@ -403,10 +430,11 @@
 				46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */,
 				46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */,
 				46E5C08F1CF9A7AD002A7887 /* Utils.m in Sources */,
-				46E5C0151CF9A796002A7887 /* ViewController.m in Sources */,
+				46E5C0151CF9A796002A7887 /* GamePlayViewController.m in Sources */,
 				46E5C09E1CF9A7AD002A7887 /* SocketLogger.swift in Sources */,
 				840EBFE71CFAF6A30065DCB5 /* Queen.m in Sources */,
 				46E5C09B1CF9A7AD002A7887 /* SocketIOClient.swift in Sources */,
+				841448D51CFB12D1005B7F13 /* NetworkConfig.m in Sources */,
 				46E5C09F1CF9A7AD002A7887 /* SocketPacket.swift in Sources */,
 				46E5C09A1CF9A7AD002A7887 /* SocketEventHandler.swift in Sources */,
 				46E5C0921CF9A7AD002A7887 /* SocketAnyEvent.swift in Sources */,
