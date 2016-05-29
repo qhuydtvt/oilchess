@@ -11,6 +11,8 @@
 @interface NetworkConfig : NSObject
 
 @property NSString* userName;
+@property NSString* roomName;
+@property NSURL* url;
 
 + (NetworkConfig*) sharedInstance;
 
