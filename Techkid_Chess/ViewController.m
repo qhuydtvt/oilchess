@@ -8,10 +8,25 @@
 
 #import "ViewController.h"
 #import "ChatRoomViewController.h"
+#import "Board.h"
+#import "Piece.h"
+
+#import "PieceView.h"
+
 @interface ViewController ()
 
 @property ChatRoomViewController *socketRoom;
 @property int messageIdx;
+
+@property float boardWidth;
+@property float boardHeight;
+
+@property float cellWidth;
+@property float cellHeight;
+
+@property Board* board;
+
+@property NSMutableDictionary* pieceDictionary;
 
 @end
 
@@ -19,12 +34,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.socketRoom = [[ChatRoomViewController alloc] initWithUserName:@"69" room:@"tbl_oilchess_69"];
-    [self.socketRoom startSocket];
     
-    [self sendMessage:@"first message"];
-    self.messageIdx = 0;
+    [self setupBoard];
+}
+
+- (void) setupBoard; {
+    
+    self.board = [[Board alloc] init];
+    
+    [_vBoard layoutIfNeeded];
+    
+    _boardWidth = _vBoard.bounds.size.width;
+    _boardHeight = _vBoard.bounds.size.height;
+    _cellWidth = _boardWidth / BOARD_WIDTH;
+    _cellHeight = _boardHeight / BOARD_HEIGHT;
+    
+    self.pieceDictionary = [[NSMutableDictionary alloc] init];
+
+    for(Piece* piece in self.board.pieces) {
+        NSString* idString = [piece getIdString];
+        PieceView* pieceView = [self createPieceView:[idString stringByAppendingString:@".png"] Piece:piece];
+        [self.vBoard addSubview:pieceView];
+    }
+}
+
+- (PieceView*) createPieceView: (NSString*)imgBundleName Piece:(Piece*) piece {
+    
+    PieceView* pieceView = [[PieceView alloc] initWithImageName:imgBundleName Piece:piece Width:_cellWidth Height:_cellHeight];
+    
+    [pieceView updateLocation];
+    return pieceView;
 }
 
 - (void) sendMessage:(NSString *)message
@@ -40,8 +79,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-    
     
 }
 

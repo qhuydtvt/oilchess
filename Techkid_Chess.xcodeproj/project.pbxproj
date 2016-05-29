@@ -40,6 +40,28 @@
 		46E5C0A21CF9A7AD002A7887 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06B1CF9A7AD002A7887 /* SocketTypes.swift */; };
 		46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06C1CF9A7AD002A7887 /* SwiftRegex.swift */; };
 		46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */; };
+		840EBFD51CFADBC80065DCB5 /* chess_board_brown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 840EBFD41CFADBC80065DCB5 /* chess_board_brown.jpg */; };
+		840EBFD81CFADC8E0065DCB5 /* Piece.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFD71CFADC8E0065DCB5 /* Piece.m */; };
+		840EBFDC1CFAE1970065DCB5 /* King.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFDB1CFAE1970065DCB5 /* King.m */; };
+		840EBFE71CFAF6A30065DCB5 /* Queen.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFE61CFAF6A30065DCB5 /* Queen.m */; };
+		840EBFEA1CFAFB170065DCB5 /* PieceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EBFE91CFAFB170065DCB5 /* PieceView.m */; };
+		841448CD1CFB0976005B7F13 /* Bishop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841448CC1CFB0976005B7F13 /* Bishop.m */; };
+		843FEFE51CFABEFC00255901 /* OilWellcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFE41CFABEFC00255901 /* OilWellcome.jpg */; };
+		843FEFE91CFABF5300255901 /* TechKidsLogo.Png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFE81CFABF5300255901 /* TechKidsLogo.Png */; };
+		843FEFEB1CFAC26900255901 /* Chess_Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFEA1CFAC26900255901 /* Chess_Board.png */; };
+		843FEFF81CFAC9BA00255901 /* rook_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFEC1CFAC9BA00255901 /* rook_white.png */; };
+		843FEFF91CFAC9BA00255901 /* rook_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFED1CFAC9BA00255901 /* rook_black.png */; };
+		843FEFFA1CFAC9BA00255901 /* queen_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFEE1CFAC9BA00255901 /* queen_white.png */; };
+		843FEFFB1CFAC9BA00255901 /* queen_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFEF1CFAC9BA00255901 /* queen_black.png */; };
+		843FEFFC1CFAC9BA00255901 /* pawn_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF01CFAC9BA00255901 /* pawn_white.png */; };
+		843FEFFD1CFAC9BA00255901 /* pawn_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF11CFAC9BA00255901 /* pawn_black.png */; };
+		843FEFFE1CFAC9BA00255901 /* knight_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF21CFAC9BA00255901 /* knight_black.png */; };
+		843FEFFF1CFAC9BA00255901 /* kinght_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF31CFAC9BA00255901 /* kinght_white.png */; };
+		843FF0001CFAC9BA00255901 /* king_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF41CFAC9BA00255901 /* king_white.png */; };
+		843FF0011CFAC9BA00255901 /* king_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF51CFAC9BA00255901 /* king_black.png */; };
+		843FF0021CFAC9BA00255901 /* bishop_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF61CFAC9BA00255901 /* bishop_white.png */; };
+		843FF0031CFAC9BA00255901 /* bishop_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF71CFAC9BA00255901 /* bishop_black.png */; };
+		843FF0081CFACBCB00255901 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FF0071CFACBCB00255901 /* Board.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +107,34 @@
 		46E5C06B1CF9A7AD002A7887 /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
 		46E5C06C1CF9A7AD002A7887 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		840EBFD41CFADBC80065DCB5 /* chess_board_brown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chess_board_brown.jpg; sourceTree = "<group>"; };
+		840EBFD61CFADC8E0065DCB5 /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
+		840EBFD71CFADC8E0065DCB5 /* Piece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
+		840EBFDA1CFAE1970065DCB5 /* King.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = King.h; sourceTree = "<group>"; };
+		840EBFDB1CFAE1970065DCB5 /* King.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = King.m; sourceTree = "<group>"; };
+		840EBFE51CFAF6A30065DCB5 /* Queen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queen.h; sourceTree = "<group>"; };
+		840EBFE61CFAF6A30065DCB5 /* Queen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queen.m; sourceTree = "<group>"; };
+		840EBFE81CFAFB170065DCB5 /* PieceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieceView.h; sourceTree = "<group>"; };
+		840EBFE91CFAFB170065DCB5 /* PieceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieceView.m; sourceTree = "<group>"; };
+		841448CB1CFB0976005B7F13 /* Bishop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
+		841448CC1CFB0976005B7F13 /* Bishop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bishop.m; sourceTree = "<group>"; };
+		843FEFE41CFABEFC00255901 /* OilWellcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OilWellcome.jpg; sourceTree = "<group>"; };
+		843FEFE81CFABF5300255901 /* TechKidsLogo.Png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TechKidsLogo.Png; sourceTree = "<group>"; };
+		843FEFEA1CFAC26900255901 /* Chess_Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chess_Board.png; sourceTree = "<group>"; };
+		843FEFEC1CFAC9BA00255901 /* rook_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rook_white.png; sourceTree = "<group>"; };
+		843FEFED1CFAC9BA00255901 /* rook_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rook_black.png; sourceTree = "<group>"; };
+		843FEFEE1CFAC9BA00255901 /* queen_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen_white.png; sourceTree = "<group>"; };
+		843FEFEF1CFAC9BA00255901 /* queen_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen_black.png; sourceTree = "<group>"; };
+		843FEFF01CFAC9BA00255901 /* pawn_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pawn_white.png; sourceTree = "<group>"; };
+		843FEFF11CFAC9BA00255901 /* pawn_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pawn_black.png; sourceTree = "<group>"; };
+		843FEFF21CFAC9BA00255901 /* knight_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_black.png; sourceTree = "<group>"; };
+		843FEFF31CFAC9BA00255901 /* kinght_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kinght_white.png; sourceTree = "<group>"; };
+		843FEFF41CFAC9BA00255901 /* king_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king_white.png; sourceTree = "<group>"; };
+		843FEFF51CFAC9BA00255901 /* king_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king_black.png; sourceTree = "<group>"; };
+		843FEFF61CFAC9BA00255901 /* bishop_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bishop_white.png; sourceTree = "<group>"; };
+		843FEFF71CFAC9BA00255901 /* bishop_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bishop_black.png; sourceTree = "<group>"; };
+		843FF0061CFACBCB00255901 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		843FF0071CFACBCB00255901 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +167,9 @@
 		46E5C00C1CF9A796002A7887 /* Techkid_Chess */ = {
 			isa = PBXGroup;
 			children = (
+				843FF0091CFAD2AC00255901 /* CustomViews */,
+				843FF0051CFACB9A00255901 /* Board */,
+				843FF0041CFAC9EF00255901 /* BoardView */,
 				46E5C0241CF9A7AD002A7887 /* SocketIO */,
 				46E5C0101CF9A796002A7887 /* AppDelegate.h */,
 				46E5C0111CF9A796002A7887 /* AppDelegate.m */,
@@ -134,6 +187,22 @@
 		46E5C00D1CF9A796002A7887 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				840EBFD41CFADBC80065DCB5 /* chess_board_brown.jpg */,
+				843FEFEC1CFAC9BA00255901 /* rook_white.png */,
+				843FEFED1CFAC9BA00255901 /* rook_black.png */,
+				843FEFEE1CFAC9BA00255901 /* queen_white.png */,
+				843FEFEF1CFAC9BA00255901 /* queen_black.png */,
+				843FEFF01CFAC9BA00255901 /* pawn_white.png */,
+				843FEFF11CFAC9BA00255901 /* pawn_black.png */,
+				843FEFF21CFAC9BA00255901 /* knight_black.png */,
+				843FEFF31CFAC9BA00255901 /* kinght_white.png */,
+				843FEFF41CFAC9BA00255901 /* king_white.png */,
+				843FEFF51CFAC9BA00255901 /* king_black.png */,
+				843FEFF61CFAC9BA00255901 /* bishop_white.png */,
+				843FEFF71CFAC9BA00255901 /* bishop_black.png */,
+				843FEFEA1CFAC26900255901 /* Chess_Board.png */,
+				843FEFE41CFABEFC00255901 /* OilWellcome.jpg */,
+				843FEFE81CFABF5300255901 /* TechKidsLogo.Png */,
 				46E5C00E1CF9A796002A7887 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -202,6 +271,39 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		843FF0041CFAC9EF00255901 /* BoardView */ = {
+			isa = PBXGroup;
+			children = (
+				840EBFE81CFAFB170065DCB5 /* PieceView.h */,
+				840EBFE91CFAFB170065DCB5 /* PieceView.m */,
+			);
+			name = BoardView;
+			sourceTree = "<group>";
+		};
+		843FF0051CFACB9A00255901 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				843FF0061CFACBCB00255901 /* Board.h */,
+				843FF0071CFACBCB00255901 /* Board.m */,
+				840EBFD61CFADC8E0065DCB5 /* Piece.h */,
+				840EBFD71CFADC8E0065DCB5 /* Piece.m */,
+				840EBFDA1CFAE1970065DCB5 /* King.h */,
+				840EBFDB1CFAE1970065DCB5 /* King.m */,
+				840EBFE51CFAF6A30065DCB5 /* Queen.h */,
+				840EBFE61CFAF6A30065DCB5 /* Queen.m */,
+				841448CB1CFB0976005B7F13 /* Bishop.h */,
+				841448CC1CFB0976005B7F13 /* Bishop.m */,
+			);
+			name = Board;
+			sourceTree = "<group>";
+		};
+		843FF0091CFAD2AC00255901 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,9 +361,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FEFFA1CFAC9BA00255901 /* queen_white.png in Resources */,
+				843FEFF91CFAC9BA00255901 /* rook_black.png in Resources */,
+				843FF0001CFAC9BA00255901 /* king_white.png in Resources */,
 				46E5C01D1CF9A796002A7887 /* LaunchScreen.storyboard in Resources */,
 				46E5C01A1CF9A796002A7887 /* Assets.xcassets in Resources */,
+				843FEFFF1CFAC9BA00255901 /* kinght_white.png in Resources */,
+				843FF0011CFAC9BA00255901 /* king_black.png in Resources */,
+				843FEFFC1CFAC9BA00255901 /* pawn_white.png in Resources */,
+				843FF0021CFAC9BA00255901 /* bishop_white.png in Resources */,
+				843FEFE51CFABEFC00255901 /* OilWellcome.jpg in Resources */,
+				843FEFEB1CFAC26900255901 /* Chess_Board.png in Resources */,
+				843FEFFE1CFAC9BA00255901 /* knight_black.png in Resources */,
+				843FEFFB1CFAC9BA00255901 /* queen_black.png in Resources */,
 				46E5C0181CF9A796002A7887 /* Main.storyboard in Resources */,
+				840EBFD51CFADBC80065DCB5 /* chess_board_brown.jpg in Resources */,
+				843FF0031CFAC9BA00255901 /* bishop_black.png in Resources */,
+				843FEFE91CFABF5300255901 /* TechKidsLogo.Png in Resources */,
+				843FEFF81CFAC9BA00255901 /* rook_white.png in Resources */,
+				843FEFFD1CFAC9BA00255901 /* pawn_black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +394,18 @@
 				46E5C0961CF9A7AD002A7887 /* SocketEnginePacketType.swift in Sources */,
 				46E5C0951CF9A7AD002A7887 /* SocketEngineClient.swift in Sources */,
 				46E5C0941CF9A7AD002A7887 /* SocketEngine.swift in Sources */,
+				841448CD1CFB0976005B7F13 /* Bishop.m in Sources */,
 				46E5C0901CF9A7AD002A7887 /* SocketAckEmitter.swift in Sources */,
 				46E5C0A01CF9A7AD002A7887 /* SocketParsable.swift in Sources */,
 				46E5C0971CF9A7AD002A7887 /* SocketEnginePollable.swift in Sources */,
 				46E5C0931CF9A7AD002A7887 /* SocketClientSpec.swift in Sources */,
+				840EBFD81CFADC8E0065DCB5 /* Piece.m in Sources */,
 				46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */,
 				46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */,
 				46E5C08F1CF9A7AD002A7887 /* Utils.m in Sources */,
 				46E5C0151CF9A796002A7887 /* ViewController.m in Sources */,
 				46E5C09E1CF9A7AD002A7887 /* SocketLogger.swift in Sources */,
+				840EBFE71CFAF6A30065DCB5 /* Queen.m in Sources */,
 				46E5C09B1CF9A7AD002A7887 /* SocketIOClient.swift in Sources */,
 				46E5C09F1CF9A7AD002A7887 /* SocketPacket.swift in Sources */,
 				46E5C09A1CF9A7AD002A7887 /* SocketEventHandler.swift in Sources */,
@@ -293,6 +414,8 @@
 				46E5C0991CF9A7AD002A7887 /* SocketEngineWebsocket.swift in Sources */,
 				46E5C0711CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m in Sources */,
 				46E5C0721CF9A7AD002A7887 /* IOMessage.m in Sources */,
+				843FF0081CFACBCB00255901 /* Board.m in Sources */,
+				840EBFEA1CFAFB170065DCB5 /* PieceView.m in Sources */,
 				46E5C0981CF9A7AD002A7887 /* SocketEngineSpec.swift in Sources */,
 				46E5C0911CF9A7AD002A7887 /* SocketAckManager.swift in Sources */,
 				46E5C00F1CF9A796002A7887 /* main.m in Sources */,
@@ -301,6 +424,7 @@
 				46E5C09C1CF9A7AD002A7887 /* SocketIOClientOption.swift in Sources */,
 				46E5C0A21CF9A7AD002A7887 /* SocketTypes.swift in Sources */,
 				46E5C0731CF9A7AD002A7887 /* DataManager.m in Sources */,
+				840EBFDC1CFAE1970065DCB5 /* King.m in Sources */,
 				46E5C06F1CF9A7AD002A7887 /* ChatRoomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +576,7 @@
 				46E5C0231CF9A796002A7887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
