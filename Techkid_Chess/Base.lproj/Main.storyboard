@@ -30,15 +30,25 @@
                                     <constraint firstAttribute="width" constant="320" id="tnl-tE-8Kp"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-gA-vBB" userLabel="waitIndicator">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="9J6-Ro-3ye"/>
+                                    <constraint firstAttribute="width" constant="37" id="NpI-SX-5wP"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bWt-gA-vBB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tjw-dM-k3A"/>
                             <constraint firstItem="CWK-DF-ZI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lH5-F1-lBE"/>
                             <constraint firstItem="CWK-DF-ZI8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="op1-uB-weC"/>
+                            <constraint firstItem="bWt-gA-vBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zmG-GF-MkO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="vBoard" destination="CWK-DF-ZI8" id="L3J-eY-sAp"/>
+                        <outlet property="waitIndicator" destination="bWt-gA-vBB" id="npq-yB-fI3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

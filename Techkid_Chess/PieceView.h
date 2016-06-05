@@ -12,11 +12,18 @@
 @interface PieceView : UIButton
 
 @property Piece* piece;
+
+@property const int row;
+@property const int column;
+
 @property float width;
 @property float height;
 
 - (instancetype) initWithImageName: (NSString*)imgName Piece:(Piece*)piece Width:(float)width Height:(float)height;
 
-- (void) updateLocation;
+- (instancetype) initWithRow: (int)row Column:(int)column Width:(float)width Height:(float)height;
+
+- (instancetype) initWithWidth: (float)width Height:(float)height;
+- (void) setPieceAndUpdateBackground: (Piece*)piece;
 
 @end

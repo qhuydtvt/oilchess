@@ -1,13 +1,13 @@
 //
-//  Queen.h
+//  Knight.h
 //  Techkid_Chess
 //
-//  Created by admin on 5/29/16.
+//  Created by admin on 6/4/16.
 //  Copyright © 2016 TechKid. All rights reserved.
 //
 
 #import "Piece.h"
 
-@interface Queen : Piece
+@interface Knight : Piece
 
 @end

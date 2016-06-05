@@ -10,6 +10,7 @@
 #import "NetworkConfig.h"
 #import "Utils.h"
 #import <Techkid_Chess-Swift.h>
+#import "Message.h"
 
 
 @interface BoardRoom ()
@@ -68,11 +69,24 @@
 
 }
 
-- (void) sendMessage:(NSDictionary *)data {
-    if (self.roomReady) {
-        NSString* message = [Utils stringJSONByDictionary:data];
-            [self.socket emit:@"message" withItems:@[message, self.networkConfig.roomName, self.networkConfig.userName]];
-     }
+//- (void) sendMessage:(NSDictionary *)data {
+//    if (self.roomReady) {
+//        NSString* message = [Utils stringJSONByDictionary:data];
+//        NSLog(@"message: %@", message);
+//        [self.socket emit:@"message" withItems:@[message, self.networkConfig.roomName, self.networkConfig.userName]];
+//        
+//     }
+//}
+
+- (BOOL) sendMessage: (Message*) message; {
+    if(self.roomReady) {
+        NSString* msgString = [Utils stringJSONByDictionary:[message getMessageData]];
+        
+        NSLog(@"message: %@", msgString);
+        [self.socket emit:@"message" withItems:@[msgString, self.networkConfig.roomName, self.networkConfig.userName]];
+        return YES;
+    }
+    return NO;
 }
 
 - (void) createRoom:(NSString *)roomName userId:(NSArray *)arrUserId complete:(void(^)(BOOL result, NSString *roomName)) completion;
@@ -81,11 +95,13 @@
     [self.socket emit:@"create_room" withItems:@[roomName, strUserId]];
     [self.socket once:@"create_room_success" callback:^(NSArray* data, SocketAckEmitter* ack) {
         [self.socket emit:@"join_room" withItems:@[data[0]]];
-        completion(YES, data[0]);
+        if(completion)
+            completion(YES, data[0]);
     }];
     
     [self.socket once:@"create_room_error" callback:^(NSArray* data, SocketAckEmitter* ack) {
-        completion(NO, nil);
+        if(completion)
+            completion(NO, nil);
     }];
 }
 
@@ -101,12 +117,14 @@
     
     if(val != nil) {
         if(self.delegate != nil && [self.delegate respondsToSelector:@selector(onMessageReceive:)]) {
-            [self.delegate onMessageReceive: val];
+            NSString* messageString = (NSString*)val[@"message"];
+            NSDictionary* dict = [Utils dictByJSONString:messageString];
+            Message* message = [Message messageWithDictionary:dict];
+            [self.delegate onMessageReceive: message];
         }
     }
     
-    
-    NSLog(@"received message: %@", val);
+    //NSLog(@"received message: %@", val);
 }
 
 

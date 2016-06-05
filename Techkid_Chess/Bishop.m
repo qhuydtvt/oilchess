@@ -10,14 +10,8 @@
 
 @implementation Bishop
 
-- (BOOL)checkMoveWithRow:(int)nextRow Column:(int)nextColumn{
-    if([super checkMoveWithRow:nextRow Column:nextColumn]) {
-        int dr = abs(nextRow - self.row);
-        int dc = abs(nextColumn - self.column);
-        if(dc == dr) return YES;
-        return NO;
-    }
-    return NO;
+- (BOOL) checkMoveWithDeltaX:(int)deltaX deltaY:(int)deltaY; {
+    return deltaX == deltaY;
 }
 
 @end

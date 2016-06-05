@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Message.h"
 
 @protocol BoardRoomDelegate <NSObject>
 
 @required
 - (void) onRoomReady;
-- (void) onMessageReceive: (NSDictionary*)data;
+- (void) onMessageReceive: (Message*)message;
 
 @end
 
@@ -20,7 +21,8 @@
 
 - (instancetype)init;
 - (void) startSocket;
-- (void) sendMessage: (NSDictionary*)data;
+- (BOOL) sendMessage: (Message*) message;
+- (void) createRoom:(NSString *)roomName userId:(NSArray *)arrUserId complete:(void(^)(BOOL result, NSString *roomName)) completion;
 
 @property id<BoardRoomDelegate> delegate;
 

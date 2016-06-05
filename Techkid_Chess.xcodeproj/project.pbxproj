@@ -59,12 +59,16 @@
 		843FEFFC1CFAC9BA00255901 /* pawn_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF01CFAC9BA00255901 /* pawn_white.png */; };
 		843FEFFD1CFAC9BA00255901 /* pawn_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF11CFAC9BA00255901 /* pawn_black.png */; };
 		843FEFFE1CFAC9BA00255901 /* knight_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF21CFAC9BA00255901 /* knight_black.png */; };
-		843FEFFF1CFAC9BA00255901 /* kinght_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF31CFAC9BA00255901 /* kinght_white.png */; };
+		843FEFFF1CFAC9BA00255901 /* knight_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF31CFAC9BA00255901 /* knight_white.png */; };
 		843FF0001CFAC9BA00255901 /* king_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF41CFAC9BA00255901 /* king_white.png */; };
 		843FF0011CFAC9BA00255901 /* king_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF51CFAC9BA00255901 /* king_black.png */; };
 		843FF0021CFAC9BA00255901 /* bishop_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF61CFAC9BA00255901 /* bishop_white.png */; };
 		843FF0031CFAC9BA00255901 /* bishop_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FEFF71CFAC9BA00255901 /* bishop_black.png */; };
 		843FF0081CFACBCB00255901 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FF0071CFACBCB00255901 /* Board.m */; };
+		846E3CBC1D03E08300CA97BA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 846E3CBB1D03E08200CA97BA /* Message.m */; };
+		8495D7A81D02DDEA00F36449 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495D7A71D02DDEA00F36449 /* Knight.m */; };
+		8495D7AB1D02E12E00F36449 /* Rook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495D7AA1D02E12E00F36449 /* Rook.m */; };
+		8495D7AE1D02E1D100F36449 /* Pawn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495D7AD1D02E1D100F36449 /* Pawn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,13 +141,21 @@
 		843FEFF01CFAC9BA00255901 /* pawn_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pawn_white.png; sourceTree = "<group>"; };
 		843FEFF11CFAC9BA00255901 /* pawn_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pawn_black.png; sourceTree = "<group>"; };
 		843FEFF21CFAC9BA00255901 /* knight_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_black.png; sourceTree = "<group>"; };
-		843FEFF31CFAC9BA00255901 /* kinght_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kinght_white.png; sourceTree = "<group>"; };
+		843FEFF31CFAC9BA00255901 /* knight_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_white.png; sourceTree = "<group>"; };
 		843FEFF41CFAC9BA00255901 /* king_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king_white.png; sourceTree = "<group>"; };
 		843FEFF51CFAC9BA00255901 /* king_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king_black.png; sourceTree = "<group>"; };
 		843FEFF61CFAC9BA00255901 /* bishop_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bishop_white.png; sourceTree = "<group>"; };
 		843FEFF71CFAC9BA00255901 /* bishop_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bishop_black.png; sourceTree = "<group>"; };
 		843FF0061CFACBCB00255901 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		843FF0071CFACBCB00255901 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		846E3CBA1D03E08200CA97BA /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		846E3CBB1D03E08200CA97BA /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		8495D7A61D02DDEA00F36449 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
+		8495D7A71D02DDEA00F36449 /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
+		8495D7A91D02E12E00F36449 /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
+		8495D7AA1D02E12E00F36449 /* Rook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rook.m; sourceTree = "<group>"; };
+		8495D7AC1D02E1D100F36449 /* Pawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pawn.h; sourceTree = "<group>"; };
+		8495D7AD1D02E1D100F36449 /* Pawn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pawn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +190,6 @@
 			children = (
 				841448D21CFB12B8005B7F13 /* Network */,
 				841448CE1CFB0F05005B7F13 /* ViewControllers */,
-				843FF0091CFAD2AC00255901 /* CustomViews */,
 				843FF0051CFACB9A00255901 /* Board */,
 				843FF0041CFAC9EF00255901 /* BoardView */,
 				46E5C0241CF9A7AD002A7887 /* SocketIO */,
@@ -204,7 +215,7 @@
 				843FEFF01CFAC9BA00255901 /* pawn_white.png */,
 				843FEFF11CFAC9BA00255901 /* pawn_black.png */,
 				843FEFF21CFAC9BA00255901 /* knight_black.png */,
-				843FEFF31CFAC9BA00255901 /* kinght_white.png */,
+				843FEFF31CFAC9BA00255901 /* knight_white.png */,
 				843FEFF41CFAC9BA00255901 /* king_white.png */,
 				843FEFF51CFAC9BA00255901 /* king_black.png */,
 				843FEFF61CFAC9BA00255901 /* bishop_white.png */,
@@ -298,6 +309,8 @@
 				841448D41CFB12D1005B7F13 /* NetworkConfig.m */,
 				841BF38F1CFB403800DB51B3 /* BoardRoom.h */,
 				841BF3901CFB403800DB51B3 /* BoardRoom.m */,
+				846E3CBA1D03E08200CA97BA /* Message.h */,
+				846E3CBB1D03E08200CA97BA /* Message.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -324,15 +337,14 @@
 				840EBFE61CFAF6A30065DCB5 /* Queen.m */,
 				841448CB1CFB0976005B7F13 /* Bishop.h */,
 				841448CC1CFB0976005B7F13 /* Bishop.m */,
+				8495D7A61D02DDEA00F36449 /* Knight.h */,
+				8495D7A71D02DDEA00F36449 /* Knight.m */,
+				8495D7A91D02E12E00F36449 /* Rook.h */,
+				8495D7AA1D02E12E00F36449 /* Rook.m */,
+				8495D7AC1D02E1D100F36449 /* Pawn.h */,
+				8495D7AD1D02E1D100F36449 /* Pawn.m */,
 			);
 			name = Board;
-			sourceTree = "<group>";
-		};
-		843FF0091CFAD2AC00255901 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +409,7 @@
 				843FF0001CFAC9BA00255901 /* king_white.png in Resources */,
 				46E5C01D1CF9A796002A7887 /* LaunchScreen.storyboard in Resources */,
 				46E5C01A1CF9A796002A7887 /* Assets.xcassets in Resources */,
-				843FEFFF1CFAC9BA00255901 /* kinght_white.png in Resources */,
+				843FEFFF1CFAC9BA00255901 /* knight_white.png in Resources */,
 				843FF0011CFAC9BA00255901 /* king_black.png in Resources */,
 				843FEFFC1CFAC9BA00255901 /* pawn_white.png in Resources */,
 				843FF0021CFAC9BA00255901 /* bishop_white.png in Resources */,
@@ -429,10 +441,13 @@
 				841448CD1CFB0976005B7F13 /* Bishop.m in Sources */,
 				46E5C0901CF9A7AD002A7887 /* SocketAckEmitter.swift in Sources */,
 				46E5C0A01CF9A7AD002A7887 /* SocketParsable.swift in Sources */,
+				8495D7A81D02DDEA00F36449 /* Knight.m in Sources */,
+				846E3CBC1D03E08300CA97BA /* Message.m in Sources */,
 				46E5C0971CF9A7AD002A7887 /* SocketEnginePollable.swift in Sources */,
 				46E5C0931CF9A7AD002A7887 /* SocketClientSpec.swift in Sources */,
 				840EBFD81CFADC8E0065DCB5 /* Piece.m in Sources */,
 				46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */,
+				8495D7AE1D02E1D100F36449 /* Pawn.m in Sources */,
 				46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */,
 				46E5C08F1CF9A7AD002A7887 /* Utils.m in Sources */,
 				46E5C0151CF9A796002A7887 /* GamePlayViewController.m in Sources */,
@@ -460,6 +475,7 @@
 				46E5C0731CF9A7AD002A7887 /* DataManager.m in Sources */,
 				840EBFDC1CFAE1970065DCB5 /* King.m in Sources */,
 				46E5C06F1CF9A7AD002A7887 /* ChatRoomViewController.m in Sources */,
+				8495D7AB1D02E12E00F36449 /* Rook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

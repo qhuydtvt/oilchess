@@ -10,16 +10,8 @@
 
 @implementation Queen
 
-- (BOOL) checkMoveWithRow:(int)nextRow Column:(int)nextColumn; {
-    if([super checkMoveWithRow:nextRow Column:nextColumn]) {
-        const int dr = abs(nextRow - self.row);
-        const int dc = abs(nextColumn - self.column);
-        if(dr == 0 || dc == 0 ) return YES;
-        return NO;
-    }
-    
-    return NO;
+- (BOOL) checkMoveWithDeltaX:(int)deltaX deltaY:(int)deltaY; {
+    return (deltaX == 0 || deltaY == 0 || (deltaX == deltaY));
 }
-
 
 @end

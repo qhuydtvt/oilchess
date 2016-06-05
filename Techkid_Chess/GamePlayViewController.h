@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *vBoard;
 @property BoardRoom* boardRoom;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *waitIndicator;
 
 @end
 

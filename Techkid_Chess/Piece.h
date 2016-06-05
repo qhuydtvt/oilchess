@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum PieceType {
+typedef enum PieceColor {
     PIECE_BLACK,
     PIECE_WHITE,
     PIECE_NONE
-} PieceType;
+} PieceColor;
 
 @protocol BoardProvider <NSObject>
 
-- (PieceType) getPieceTypeAtRow: (int)row Column:(int)column;
+- (PieceColor) getPieceTypeAtRow: (int)row Column:(int)column;
 
 @end
 
@@ -24,14 +24,17 @@ typedef enum PieceType {
 
 @property int row;
 @property int column;
-@property PieceType type;
+@property PieceColor color;
 
 @property id<BoardProvider> boardProvider;
 
 - (BOOL) checkMoveWithRow: (int)nextRow Column:(int)nextColumn;
 
+- (BOOL) checkMoveWithDeltaX: (int)deltaX deltaY:(int)deltaY;
+
+- (void) move: (int)row Column:(int)column;
+
 - (NSString*) getIdString;
 
-- (instancetype) initWithRow:(int)row Column:(int)column  Type:(PieceType)type;
-
+- (instancetype) initWithRow:(int)row Column:(int)column  Color:(PieceColor)color;
 @end
