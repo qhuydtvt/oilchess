@@ -28,13 +28,21 @@
     if(![super checkMoveWithRow:nextRow Column:nextColumn]) return NO;
     int dr = self.row - nextRow;
     int dc = self.column - nextColumn;
-        int range = 1;
+    int range = 1;
     if(self.firstMove) range = 2;
     
-    if(dc != 0) return NO;
-    if(self.color == PIECE_BLACK && dr < 0) return NO;
-    if(self.color == PIECE_WHITE && dr > 0) return NO;
-    return abs(dr) <= range;
+    if(dc == 0){
+        if(self.color == PIECE_BLACK && dr < 0) return NO;
+        if(self.color == PIECE_WHITE && dr > 0) return NO;
+        return abs(dr) <= range;
+    }
+    else if (dc == 1 && dr == 1) {
+        PieceColor destColor = [self.boardProvider getPieceTypeAtRow:nextRow Column:nextColumn];
+        if(self.color == PIECE_BLACK && destColor != PIECE_WHITE) return NO;
+        if(self.color == PIECE_WHITE && destColor != PIECE_BLACK) return NO;
+        return YES;
+    }
+    return NO;
 }
 
 - (void)move:(int)row Column:(int)column; {

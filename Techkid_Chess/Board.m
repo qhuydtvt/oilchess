@@ -78,6 +78,8 @@
         for (Piece* piece in self.pieces) {
             piece.boardProvider = self;
         }
+        
+        self.isBlackTurn = YES;
     }
     return self;
 }
@@ -102,14 +104,30 @@
 }
 
 - (BOOL) moveByMessage: (Message *)message; {
+    
     Piece* piece = [self getPieceAtRow:message.sourceRow Column:message.sourceColumn];
     if(piece == nil) return NO;
     if(![[piece getIdString] isEqualToString:message.idString]) return NO;
+    if(piece.color == PIECE_BLACK && !self.isBlackTurn)  return NO;
+    if(piece.color == PIECE_WHITE && self.isBlackTurn) return NO;
+    if(![piece checkMoveWithRow:message.destinationRow Column:message.destinationColumn]) return NO;
+    
+    Piece* pieceAtNextPosition = [self getPieceAtRow:message.destinationRow Column:message.destinationColumn];
+    if(pieceAtNextPosition) {
+        [self.pieces removeObject:pieceAtNextPosition];
+    }
     
     piece.row = message.destinationRow;
     piece.column = message.destinationColumn;
     
+    self.isBlackTurn = !self.isBlackTurn;
     return YES;
+}
+
+
+- (BOOL) moveAllowed: (PieceColor)pieceColor; {
+    if(self.isBlackTurn) return pieceColor == PIECE_BLACK;
+    else return pieceColor == PIECE_WHITE;
 }
 
 @end

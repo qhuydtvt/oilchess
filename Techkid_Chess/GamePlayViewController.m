@@ -15,7 +15,7 @@
 #import "PieceView.h"
 #import "NetworkConfig.h"
 
-#define TEST_NETWORK 1
+#define TEST_NETWORK 0
 
 typedef enum : NSUInteger {
     PLAY_STATE_IDLE,
@@ -33,12 +33,12 @@ typedef enum : NSUInteger {
 @property float cellWidth;
 @property float cellHeight;
 
+@property PieceColor playerColor;
 @property Board* board;
 @property PieceView* selectedView;
 
 @property NSMutableArray* pieceViews;
 @property PlayState playState;
-@property BOOL moveAllowed;
 @property PieceView* selectedPieceView;
 
 @end
@@ -73,6 +73,12 @@ typedef enum : NSUInteger {
     }
 }
 
+- (void) enableDisableAllPieceViews: (BOOL)isEnabled {
+    for(PieceView* pieceVew in self.pieceViews) {
+        [pieceVew setEnabled:isEnabled];
+    }
+}
+
 - (void) setupBoard; {
     
     self.playState = PLAY_STATE_IDLE;
@@ -80,9 +86,9 @@ typedef enum : NSUInteger {
     
     self.board = [[Board alloc] init];
     if([[NetworkConfig sharedInstance].userName containsString:@"1"]){
-        self.board.currentColor = PIECE_BLACK;
+        self.playerColor = PIECE_BLACK;
     } else {
-        self.board.currentColor = PIECE_WHITE;
+        self.playerColor = PIECE_WHITE;
     }
     
     [_vBoard layoutIfNeeded];
@@ -110,23 +116,25 @@ typedef enum : NSUInteger {
     PieceView* pieceView = (PieceView*)p;
     
     NSLog(@"%@", [pieceView.piece getIdString]);
-
+    
     switch (self.playState) {
         case PLAY_STATE_IDLE:
 #if TEST_NETWORK
             if(pieceView.piece != nil)
 #else
-            if(pieceView.piece != nil && pieceView.piece.color == self.board.currentColor)
+                if (pieceView.piece != nil &&
+                    pieceView.piece.color == self.playerColor &&
+                    [self.board moveAllowed:self.playerColor]
+                    )
 #endif
-            {
-                pieceView.selected = YES;
-                self.playState = PLAY_STATE_PIECE_SELECTED;
-                self.selectedPieceView = pieceView;
-            }
+                {
+                    pieceView.selected = YES;
+                    self.playState = PLAY_STATE_PIECE_SELECTED;
+                    self.selectedPieceView = pieceView;
+                }
             break;
         case PLAY_STATE_PIECE_SELECTED:
-            if(pieceView.piece != nil) {
-                pieceView.selected = YES;
+            if(pieceView.piece != nil && pieceView.piece.color == self.selectedPieceView.piece.color) {
                 self.selectedPieceView = pieceView;
             } else {
                 Piece* selectedPiece = self.selectedPieceView.piece;
@@ -134,10 +142,9 @@ typedef enum : NSUInteger {
                 int column = pieceView.column;
                 
                 if([selectedPiece checkMoveWithRow:pieceView.row Column:pieceView.column]) {
+                    [self enableDisableAllPieceViews: NO];
                     Message* message = [[Message alloc] initWithSourceRow:selectedPiece.row :selectedPiece.column :row :column :[selectedPiece getIdString]];
                     [self.boardRoom sendMessage:message];
-//                    [selectedPiece move:row Column:column];
-                    [self reloadBoard];
                     self.playState = PLAY_STATE_IDLE;
                 }
             }
@@ -156,6 +163,7 @@ typedef enum : NSUInteger {
     NSLog(@"Message received: %@", message);
     [self.board moveByMessage:message];
     [self reloadBoard];
+    [self enableDisableAllPieceViews:YES];
 }
 
 - (void)didReceiveMemoryWarning {

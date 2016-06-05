@@ -18,10 +18,12 @@
 @interface Board : NSObject <BoardProvider>
 
 @property NSMutableArray* pieces;
-@property PieceColor currentColor;
+@property BOOL isBlackTurn;
 
 - (Piece*) getPieceAtRow: (int)row Column:(int)column;
+
 - (BOOL) moveByMessage: (Message *)message;
+- (BOOL) moveAllowed: (PieceColor)pieceColor;
 
 @end
 

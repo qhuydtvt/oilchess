@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 #if PRE_DEFINED_USERNAME
-    self.tfUsername.text = @"user1";
+    self.tfUsername.text = @"user2";
 #endif
     
 }
