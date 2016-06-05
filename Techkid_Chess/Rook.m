@@ -10,6 +10,11 @@
 
 @implementation Rook
 
+- (BOOL) checkMoveWithRow:(int)nextRow Column:(int)nextColumn {
+    if(![super checkMoveWithRow:nextRow Column:nextColumn]) return NO;
+    return [super checkMoveInStraightLine:nextRow :nextColumn];
+}
+
 - (BOOL) checkMoveWithDeltaX:(int)deltaX deltaY:(int)deltaY; {
     return deltaX == 0 || deltaY == 0;
 }

@@ -34,6 +34,9 @@ typedef enum PieceColor {
 
 - (void) move: (int)row Column:(int)column;
 
+- (BOOL) checkMoveInStraightLine: (int)nextRow :(int)nextColumn;
+- (BOOL) checkMoveInDiagonalLine: (int)nextRow :(int)nextColumn;
+
 - (NSString*) getIdString;
 
 - (instancetype) initWithRow:(int)row Column:(int)column  Color:(PieceColor)color;

@@ -15,13 +15,14 @@
 
 @property const int row;
 @property const int column;
+@property const BOOL rotate;
 
 @property float width;
 @property float height;
 
 - (instancetype) initWithImageName: (NSString*)imgName Piece:(Piece*)piece Width:(float)width Height:(float)height;
 
-- (instancetype) initWithRow: (int)row Column:(int)column Width:(float)width Height:(float)height;
+- (instancetype) initWithRow: (int)row Column:(int)column Width:(float)width Height:(float)height Rotate:(BOOL)rotate;
 
 - (instancetype) initWithWidth: (float)width Height:(float)height;
 - (void) setPieceAndUpdateBackground: (Piece*)piece;

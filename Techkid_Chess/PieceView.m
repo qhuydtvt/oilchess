@@ -7,6 +7,7 @@
 //
 
 #import "PieceView.h"
+#import "Board.h"
 #import <UIKit/UIKit.h>
 
 @implementation PieceView
@@ -31,16 +32,22 @@
     return self;
 }
 
-- (instancetype) initWithRow: (int)row Column:(int)column Width:(float)width Height:(float)height; {
+- (instancetype) initWithRow: (int)row Column:(int)column Width:(float)width Height:(float)height Rotate:(BOOL)rotate; {
     
     self = [super init];
     
     if(self) {
         self.imageView.contentMode = UIViewContentModeScaleAspectFill;
         self.translatesAutoresizingMaskIntoConstraints = YES;
+        self.rotate = rotate;
         self.row = row;
         self.column = column;
-        self.frame = CGRectMake(column * width, row * height, width, height);
+        if(self.rotate) {
+            self.frame = CGRectMake((BOARD_WIDTH - 1 - column) * width, (BOARD_HEIGHT - 1 - row) * height, width, height);
+        }
+        else {
+            self.frame = CGRectMake(column * width, row * height, width, height);
+        }
     }
     
     return self;

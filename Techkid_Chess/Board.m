@@ -80,6 +80,7 @@
         }
         
         self.isBlackTurn = YES;
+        self.gameFinished = NO;
     }
     return self;
 }
@@ -115,6 +116,13 @@
     Piece* pieceAtNextPosition = [self getPieceAtRow:message.destinationRow Column:message.destinationColumn];
     if(pieceAtNextPosition) {
         [self.pieces removeObject:pieceAtNextPosition];
+        if([pieceAtNextPosition isKindOfClass:[King class]]) {
+            /* We have a winner */
+            self.gameFinished = YES;
+            if(self.delegate != nil && [self.delegate respondsToSelector:@selector(gameDidFinish:)]) {
+                [self.delegate gameDidFinish:pieceAtNextPosition.color];
+            }
+        }
     }
     
     piece.row = message.destinationRow;
@@ -126,6 +134,7 @@
 
 
 - (BOOL) moveAllowed: (PieceColor)pieceColor; {
+    if (self.gameFinished) return NO;
     if(self.isBlackTurn) return pieceColor == PIECE_BLACK;
     else return pieceColor == PIECE_WHITE;
 }

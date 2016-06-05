@@ -10,6 +10,11 @@
 
 @implementation Bishop
 
+- (BOOL) checkMoveWithRow:(int)nextRow Column:(int)nextColumn {
+    if(![super checkMoveWithRow:nextRow Column:nextColumn]) return NO;
+    return [super checkMoveInDiagonalLine:nextRow :nextColumn];
+}
+
 - (BOOL) checkMoveWithDeltaX:(int)deltaX deltaY:(int)deltaY; {
     return deltaX == deltaY;
 }

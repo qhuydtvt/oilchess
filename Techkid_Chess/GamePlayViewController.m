@@ -22,6 +22,12 @@ typedef enum : NSUInteger {
     PLAY_STATE_PIECE_SELECTED
 } PlayState;
 
+typedef enum : NSUInteger {
+    GAME_STATE_PLAYING,
+    GAME_STATE_WON,
+    GAME_STATE_LOST
+} GameState;
+
 @interface GamePlayViewController ()
 
 @property ChatRoomViewController *socketRoom;
@@ -73,6 +79,12 @@ typedef enum : NSUInteger {
     }
 }
 
+- (PieceView*) getPieceViewByRow: (int)row :(int)col {
+    int idx = row * BOARD_HEIGHT + col;
+    PieceView* pieceView = self.pieceViews[idx];
+    return pieceView;
+}
+
 - (void) enableDisableAllPieceViews: (BOOL)isEnabled {
     for(PieceView* pieceVew in self.pieceViews) {
         [pieceVew setEnabled:isEnabled];
@@ -83,8 +95,10 @@ typedef enum : NSUInteger {
     
     self.playState = PLAY_STATE_IDLE;
     self.selectedPieceView = nil;
+    [self updateGameState:GAME_STATE_PLAYING];
     
     self.board = [[Board alloc] init];
+    self.board.delegate = self;
     if([[NetworkConfig sharedInstance].userName containsString:@"1"]){
         self.playerColor = PIECE_BLACK;
     } else {
@@ -99,9 +113,11 @@ typedef enum : NSUInteger {
     _cellWidth = _boardWidth / BOARD_WIDTH;
     _cellHeight = _boardHeight / BOARD_HEIGHT;
     
+    BOOL rotate = (self.playerColor == PIECE_WHITE);
+    
     for(int row = 0; row < 8; row++) {
         for(int col = 0; col < 8; col++) {
-            PieceView* pieceView = [[PieceView alloc] initWithRow:row Column:col Width:self.cellWidth Height:self.cellHeight];
+            PieceView* pieceView = [[PieceView alloc] initWithRow:row Column:col Width:self.cellWidth Height:self.cellHeight Rotate:(BOOL)rotate];
             [self.vBoard addSubview:pieceView];
             [self.pieceViews addObject:pieceView];
             [pieceView layoutIfNeeded];
@@ -161,9 +177,56 @@ typedef enum : NSUInteger {
 
 - (void) onMessageReceive: (Message*)message; {
     NSLog(@"Message received: %@", message);
-    [self.board moveByMessage:message];
-    [self reloadBoard];
-    [self enableDisableAllPieceViews:YES];
+    PieceView* srcPieceView = [self getPieceViewByRow:message.sourceRow :message.sourceColumn];
+    PieceView* dstPieceView = [self getPieceViewByRow:message.destinationRow :message.destinationColumn];
+    if(srcPieceView.piece != nil) {
+        CGPoint oldCenter = srcPieceView.center;
+        [UIView animateWithDuration:0.3f
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveLinear
+         
+                         animations:^{
+                             srcPieceView.center = dstPieceView.center;
+                         }
+                         completion:^(BOOL finished) {
+                             srcPieceView.center = oldCenter;
+                             [self.board moveByMessage:message];
+                             [self reloadBoard];
+                             [self enableDisableAllPieceViews:YES];
+                         }];
+    }
+    
+    
+}
+
+#pragma MARK BoardDelegate
+
+- (void) gameDidFinish: (PieceColor)loser; {
+    if(loser == self.playerColor) {
+        [self updateGameState:GAME_STATE_LOST];
+    } else {
+        [self updateGameState:GAME_STATE_WON];
+    }
+}
+
+- (void) updateGameState: (GameState)gameState {
+    switch (gameState) {
+        case GAME_STATE_WON:
+            [self.lblGameState setHidden:NO];
+            [self.lblGameState setText:@"YOU WON!!!"];
+            [self.lblGameState setTextColor:[UIColor greenColor]];
+            break;
+        case GAME_STATE_LOST:
+            [self.lblGameState setHidden:NO];
+            [self.lblGameState setText:@"YOU LOST!!!"];
+            [self.lblGameState setTextColor:[UIColor redColor]];
+            break;
+        case GAME_STATE_PLAYING:
+            [self.lblGameState setHidden:YES];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

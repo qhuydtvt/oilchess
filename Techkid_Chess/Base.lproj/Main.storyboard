@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game Play View Controller-->
@@ -37,16 +38,29 @@
                                     <constraint firstAttribute="width" constant="37" id="NpI-SX-5wP"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ek-4k-kJp" userLabel="lblGameStatus">
+                                <rect key="frame" x="178" y="30" width="245" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="STs-gX-Opy"/>
+                                    <constraint firstAttribute="width" constant="245" id="z1u-Pm-Hkt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Ek-4k-kJp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Owv-XB-zrG"/>
                             <constraint firstItem="bWt-gA-vBB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tjw-dM-k3A"/>
                             <constraint firstItem="CWK-DF-ZI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lH5-F1-lBE"/>
                             <constraint firstItem="CWK-DF-ZI8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="op1-uB-weC"/>
+                            <constraint firstItem="2Ek-4k-kJp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="seA-VB-xiS"/>
                             <constraint firstItem="bWt-gA-vBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zmG-GF-MkO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblGameState" destination="2Ek-4k-kJp" id="xsO-HO-OkC"/>
                         <outlet property="vBoard" destination="CWK-DF-ZI8" id="L3J-eY-sAp"/>
                         <outlet property="waitIndicator" destination="bWt-gA-vBB" id="npq-yB-fI3"/>
                     </connections>

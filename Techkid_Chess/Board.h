@@ -15,10 +15,19 @@
 #define BOARD_HEIGHT 8
 
 
+@protocol BoardDelegate <NSObject>
+
+@required
+- (void) gameDidFinish: (PieceColor)loser;
+
+@end
+
 @interface Board : NSObject <BoardProvider>
 
 @property NSMutableArray* pieces;
 @property BOOL isBlackTurn;
+@property id<BoardDelegate> delegate;
+@property BOOL gameFinished;
 
 - (Piece*) getPieceAtRow: (int)row Column:(int)column;
 

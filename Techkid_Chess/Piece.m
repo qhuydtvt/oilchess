@@ -36,6 +36,42 @@
     return [self checkMoveWithDeltaX:deltaX deltaY:deltaY];
 }
 
+- (BOOL) checkMoveInStraightLine: (int)nextRow :(int)nextColumn; {
+    if(self.row == nextRow) {
+        int minCol = MIN(self.column, nextColumn);
+        int maxCol = MAX(self.column, nextColumn);
+        for(int col = minCol + 1; col < maxCol; col++) {
+            if([self.boardProvider getPieceTypeAtRow:self.row Column:col] != PIECE_NONE)
+                return NO;
+        }
+    } else if(self.column == nextColumn) {
+        int minRow = MIN(self.row, nextRow);
+        int maxRow = MAX(self.row, nextRow);
+        for(int row = minRow + 1; row < maxRow; row++) {
+            if([self.boardProvider getPieceTypeAtRow:row Column:self.column] != PIECE_NONE)
+                return NO;
+        }
+    }
+    return YES;
+}
+
+
+- (BOOL) checkMoveInDiagonalLine: (int)nextRow :(int)nextColumn; {
+    int dr = 1;
+    int dc = 1;
+    if(nextRow < self.row) dr = -1;
+    if(nextColumn < self.column) dc = -1;
+    int row = self.row + dr;
+    int col = self.column + dc;
+    while(row != nextRow) {
+        if([self.boardProvider getPieceTypeAtRow:row Column:col] != PIECE_NONE)
+            return NO;
+        row += dr;
+        col += dc;
+    }
+    return YES;
+}
+
 - (BOOL) checkMoveWithDeltaX:(int)deltaX deltaY:(int)deltaY;{
     return YES;
 }
