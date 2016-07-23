@@ -36,7 +36,9 @@
         if(self.color == PIECE_WHITE && dr > 0) return NO;
         return abs(dr) <= range;
     }
-    else if (dc == 1 && dr == 1) {
+    else if (
+        (self.color == PIECE_BLACK && dr == 1 && abs(dc) == 1) ||
+        (self.color == PIECE_WHITE && dr == -1 && abs(dc) == 1)) {
         PieceColor destColor = [self.boardProvider getPieceTypeAtRow:nextRow Column:nextColumn];
         if(self.color == PIECE_BLACK && destColor != PIECE_WHITE) return NO;
         if(self.color == PIECE_WHITE && destColor != PIECE_BLACK) return NO;
